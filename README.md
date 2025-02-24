@@ -7,7 +7,7 @@ that LECLIP achieves superior performance on 15 challenging datasets, including 
 # Overview of LECLIP
 ![image](https://github.com/user-attachments/assets/b5604e0c-0e09-4800-b2dd-63543ddd34f2)
 # Result
-![image](https://github.com/user-attachments/assets/4cf44c39-c4a0-4676-8bf1-7a746332df53)
+![image](https://github.com/user-attachments/assets/6e852f5c-8b19-44a8-8225-7e8453e8a29e)
 ![image](https://github.com/user-attachments/assets/1c32e1a9-dc06-47ce-a918-10cc4f62953c)
 # Requirement
  `pip install -r requirements.txt` 
