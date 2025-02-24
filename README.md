@@ -5,7 +5,7 @@ image classification, emphasizing global visual embeddings, while anomaly detect
 Enhanced CLIP (LECLIP) framework for ZSAD. LECLIP incorporates a Local Alignment Module that divides images into blocks and aligns them with learnable text embeddings, ensuring precise relevance expression. Furthermore, a trainingfree Echo-Attention is proposed to complement the traditional QKV attention, enabling the model to capture both global and local image details effectively, thus providing a more accurate and detailed image representation. Experimental results show
 that LECLIP achieves superior performance on 15 challenging datasets, including 6 industrial datasets and 9 medical datasets.
 # Overview of LECLIP
-![image](https://github.com/user-attachments/assets/26642f00-969c-4e21-8a89-95421b1ac1b8)
+![image](https://github.com/user-attachments/assets/b5604e0c-0e09-4800-b2dd-63543ddd34f2)
 # Result
 ![image](https://github.com/user-attachments/assets/4cf44c39-c4a0-4676-8bf1-7a746332df53)
 ![image](https://github.com/user-attachments/assets/1c32e1a9-dc06-47ce-a918-10cc4f62953c)
