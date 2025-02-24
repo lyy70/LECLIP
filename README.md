@@ -18,18 +18,18 @@ Prepare the JSON file for the dataset. If none can be generated in dataset.py.
 We test all datasets by training once on MVTec AD. For MVTec AD, LECLIP is trained on VisA.  
 Fast running  
 ```python 
-   python train.py`
+   python train.py
 ```
 Batch processing  
 ```python 
-  `bash train.sh`
+  bash train.sh
 ```
 # Test
 Fast running  
 ```python
-  `python test.py`
+  python test.py
 ```
 Batch processing
 ```python
-  `bash test.sh`
+  bash test.sh
 ```
