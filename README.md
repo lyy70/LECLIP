@@ -12,7 +12,6 @@ that LECLIP achieves superior performance on 15 challenging datasets, including 
 
 # Training（Zero-shot）
 We test all datasets by training once on MVTec AD. For MVTec AD, LECLIP is trained on VisA.
-bash train.sh
-
+ `python train.py` 
 # Test
-bash test.sh
+ `python test.py` 
