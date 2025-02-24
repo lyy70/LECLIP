@@ -15,16 +15,21 @@ that LECLIP achieves superior performance on 15 challenging datasets, including 
 Prepare the backbone ViT-L-14-336.pt under the AnomalyCLIP_lib path.
 Prepare the JSON file for the dataset. If none can be generated in dataset.py.
 # Training（Zero-shot）
-We test all datasets by training once on MVTec AD. For MVTec AD, LECLIP is trained on VisA.
-Fast running
+We test all datasets by training once on MVTec AD. For MVTec AD, LECLIP is trained on VisA.  
+Fast running  
 ```python 
    python train.py`
 ```
-Batch processing
+Batch processing  
 ```python 
-  `bash train.sh` 
+  `bash train.sh`
+```
 # Test
-Fast running
-  `python test.py` 
+Fast running  
+```python
+  `python test.py`
+```
 Batch processing
-  `bash test.sh` 
+```python
+  `bash test.sh`
+```
