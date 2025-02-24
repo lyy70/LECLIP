@@ -9,9 +9,11 @@ that LECLIP achieves superior performance on 15 challenging datasets, including 
 # Result
 ![image](https://github.com/user-attachments/assets/4cf44c39-c4a0-4676-8bf1-7a746332df53)
 ![image](https://github.com/user-attachments/assets/1c32e1a9-dc06-47ce-a918-10cc4f62953c)
-
+# Requirement
+ `pip install -r requirements.txt` 
 # Training（Zero-shot）
 We test all datasets by training once on MVTec AD. For MVTec AD, LECLIP is trained on VisA.
+
  `python train.py` 
 # Test
  `python test.py` 
