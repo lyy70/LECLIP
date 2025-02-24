@@ -1,2 +1,2 @@
 # LECLIP
-A method for zero-shot anomaly detection
+LECLIP: Boosting Zero-Shot Anomaly Detection with Local Enhanced CLIP
