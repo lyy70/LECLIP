@@ -82,39 +82,39 @@ class Attention(nn.Module):
         x_ori = (attn_ori @ v).transpose(1, 2).reshape(B, N, C)
         x_ori = self.proj_drop(self.proj(x_ori))
         ########################## Echo-Attention ############################
-        # Q_Q = q
-        # K_Q = q
-        # Q_K = k
-        # K_K = k
-        # Q_V = v
-        # K_V = v
-        #
-        # pre_norm = torch.norm(x, dim=-1).mean(dim=-1, keepdim=True).unsqueeze(1).unsqueeze(-1)
-        # inv_temp = pre_norm * self.scale
-        #
-        # Q_Q = F.normalize(Q_Q, dim=-1)
-        # K_Q = F.normalize(K_Q, dim=-1)
-        # Q_K = F.normalize(Q_K, dim=-1)
-        # K_K = F.normalize(K_K, dim=-1)
-        # Q_V = F.normalize(Q_V, dim=-1)
-        # K_V = F.normalize(K_V, dim=-1)
-        #
-        # attn_QQ = (Q_Q @ K_Q.transpose(-2, -1)) * inv_temp
-        # attn_KK = (Q_K @ K_K.transpose(-2, -1)) * inv_temp
-        # attn_VV = (Q_V @ K_V.transpose(-2, -1)) * inv_temp
-        #
-        # attn_QQ = (attn_QQ).softmax(dim=-1)
-        # attn_KK = (attn_KK).softmax(dim=-1)
-        # attn_VV = (attn_VV).softmax(dim=-1)
-        #
-        # xs1 = attn_QQ @ v
-        # xs2 = attn_KK @ v
-        # xs3 = attn_VV @ v
-        #
-        # xs = (xs1 + xs2 + xs3) / 3
-        #
-        # x = xs.transpose(1, 2).reshape(B, N, C)
-        # x = self.proj_drop(self.proj(x))
+        Q_Q = q
+        K_Q = q
+        Q_K = k
+        K_K = k
+        Q_V = v
+        K_V = v
+        
+        pre_norm = torch.norm(x, dim=-1).mean(dim=-1, keepdim=True).unsqueeze(1).unsqueeze(-1)
+        inv_temp = pre_norm * self.scale
+        
+        Q_Q = F.normalize(Q_Q, dim=-1)
+        K_Q = F.normalize(K_Q, dim=-1)
+        Q_K = F.normalize(Q_K, dim=-1)
+        K_K = F.normalize(K_K, dim=-1)
+        Q_V = F.normalize(Q_V, dim=-1)
+        K_V = F.normalize(K_V, dim=-1)
+        
+        attn_QQ = (Q_Q @ K_Q.transpose(-2, -1)) * inv_temp
+        attn_KK = (Q_K @ K_K.transpose(-2, -1)) * inv_temp
+        attn_VV = (Q_V @ K_V.transpose(-2, -1)) * inv_temp
+        
+        attn_QQ = (attn_QQ).softmax(dim=-1)
+        attn_KK = (attn_KK).softmax(dim=-1)
+        attn_VV = (attn_VV).softmax(dim=-1)
+        
+        xs1 = attn_QQ @ v
+        xs2 = attn_KK @ v
+        xs3 = attn_VV @ v
+        
+        xs = (xs1 + xs2 + xs3) / 3
+        
+        x = xs.transpose(1, 2).reshape(B, N, C)
+        x = self.proj_drop(self.proj(x))
         #####################################################
         ############# qq-Attention ############
         # k = q
